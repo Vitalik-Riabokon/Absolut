@@ -1,0 +1,12 @@
+services:
+  bot:
+    container_name: Absolut
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    command: [ "python", "main.py" ]
+
